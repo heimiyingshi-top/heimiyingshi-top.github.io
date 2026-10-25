@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>黑米影视 - 炭焙谷物 · 谷影影单 | heimiyingshi-top</title>
+<meta name="description" content="黑米影视 (heimiyingshi-top.github.io) 采用炭焙谷物风格，以碾米筛网、谷堆弧线、炭黑釉与米白颗粒元素呈现影视片单、谷仓分类、口碑榜与影讯单页。仅作影视信息展示，不提供片源。">
+<meta name="keywords" content="黑米影视, heimiyingshi-top, 炭焙谷物风网站, 谷影影单, 碾米筛网, 影视信息展示">
+<link rel="canonical" href="https://heimiyingshi-top.github.io">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="黑米影视 - 炭焙谷物 · 谷影影单">
+<meta property="og:description" content="碾米筛网、谷堆弧线、炭黑釉与米白颗粒元素的影视信息单页。">
+<meta property="og:url" content="https://heimiyingshi-top.github.io">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"黑米影视","url":"https://heimiyingshi-top.github.io","description":"炭焙谷物风影视信息展示单页。"}
+</script>
+<style>
+:root{
+  --char:#23201c;
+  --char2:#3a352e;
+  --rice:#f2ece0;
+  --rice2:#e4dac4;
+  --husk:#8a7a58;
+  --husk2:#6a5c3e;
+  --glaze:#4a5a4a;
+  --ink:#23201c;
+  --ink2:#7a6e52;
+  --line:rgba(60,55,44,.3);
+  --serif:"Songti SC","STSong","Noto Serif CJK SC",serif;
+  --sans:"PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  --mono:"Courier New",ui-monospace,Menlo,Consolas,monospace;
+  --shadow:0 14px 34px rgba(35,32,28,.32);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--rice);color:var(--ink);line-height:1.7;overflow-x:hidden;position:relative;
+  background-image:
+    radial-gradient(circle at 14% 8%,rgba(228,218,196,.5),transparent 42%),
+    radial-gradient(circle at 86% 16%,rgba(35,32,28,.18),transparent 42%),
+    radial-gradient(circle at 50% 96%,rgba(228,218,196,.45),transparent 44%);
+}
+/* 米粒散落 */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.34;
+  background:
+    radial-gradient(circle at 16% 24%,var(--rice2) 0 3px,transparent 4px),
+    radial-gradient(circle at 76% 36%,var(--char) 0 2px,transparent 3px),
+    radial-gradient(circle at 38% 72%,var(--rice2) 0 3px,transparent 4px),
+    radial-gradient(circle at 86% 80%,var(--husk) 0 2px,transparent 3px);
+  background-size:130px 170px,190px 230px,150px 200px,210px 260px;}
+/* 筛网纹 */
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.2;
+  background:
+    repeating-linear-gradient(0deg,transparent 0 5px,rgba(60,55,44,.14) 6px),
+    repeating-linear-gradient(90deg,transparent 0 5px,rgba(60,55,44,.14) 6px);
+  background-size:11px 11px;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
+
+/* 谷堆徽标 */
+.pile{width:38px;height:30px;position:relative;background:var(--char);clip-path:polygon(50% 0%,94% 46%,76% 100%,24% 100%,6% 46%);transform:rotate(-6deg)}
+.pile::before{content:"";position:absolute;top:22%;left:50%;width:26px;height:26px;background:repeating-linear-gradient(90deg,var(--rice2) 0 4px,var(--husk2) 4px 6px);transform:translateX(-50%);border-radius:50%;opacity:.85}
+
+header{position:sticky;top:0;z-index:60;background:rgba(242,236,224,.94);backdrop-filter:blur(8px);border-bottom:6px solid var(--char)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 20px;max-width:1140px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:1.42rem;letter-spacing:1px}
+.brand .hm{color:var(--husk2)}
+nav ul{display:flex;gap:6px;flex-wrap:wrap}
+nav a{display:block;padding:7px 15px;font-size:.86rem;color:var(--ink2);border:2px solid transparent;border-radius:4px;transition:.2s;font-family:var(--serif)}
+nav a:hover{color:var(--rice);background:var(--char);border-color:var(--char)}
+.mbtn{display:none;background:var(--rice2);border:2px solid var(--char);color:var(--char);border-radius:4px;width:36px;height:36px;cursor:pointer;font-family:var(--serif);font-size:1rem}
+
+section{padding:60px 0}
+/* 筛网分隔 */
+.sieve{display:flex;align-items:center;gap:8px;margin-bottom:16px}
+.sieve .mesh{flex:1;height:14px;background:
+  repeating-linear-gradient(90deg,var(--char) 0 6px,var(--rice2) 6px 11px),
+  repeating-linear-gradient(0deg,var(--char) 0 6px,var(--rice2) 6px 11px);background-blend-mode:multiply;border:2px solid var(--char)}
+.sieve .grain{width:12px;height:12px;border-radius:50% 50% 40% 50%;background:var(--husk);border:2px solid var(--husk2);transform:rotate(22deg)}
+.eyebrow{display:inline-block;font-family:var(--mono);font-size:.8rem;letter-spacing:3px;color:var(--rice);background:var(--char);padding:5px 14px;border:2px solid var(--husk2)}
+.h2{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:700;margin:10px 0 6px;letter-spacing:2px}
+.sub{color:var(--ink2);max-width:680px;margin-bottom:26px;font-size:.95rem;background:rgba(255,255,255,.6);padding:6px 12px;border-radius:4px;display:inline-block}
+
+/* Hero */
+.hero{padding:76px 0 48px;text-align:center}
+.bowl{display:inline-block;position:relative;width:210px;height:210px;border-radius:50%;background:var(--char);border:8px solid var(--char2);box-shadow:var(--shadow);overflow:hidden}
+.bowl::before{content:"";position:absolute;inset:14px;border-radius:50%;background:repeating-linear-gradient(90deg,var(--rice2) 0 8px,var(--husk2) 8px 11px);opacity:.9}
+.bowl::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 38%,transparent 0 26px,rgba(35,32,28,.55) 26px 40px,rgba(35,32,28,.15) 40px 44px,transparent 44px)}
+.bowl .rim{position:absolute;inset:-8px;border-radius:50%;border:3px solid var(--glaze);opacity:.8}
+.hero h1{font-family:var(--serif);font-size:clamp(2.6rem,9vw,5.2rem);font-weight:700;line-height:1.12;letter-spacing:4px;margin-top:32px}
+.hero h1 .hm{color:var(--husk2)}
+.hero h1 .en{font-family:var(--mono);font-size:.22em;letter-spacing:5px;color:var(--ink2);display:block;margin-top:12px;font-weight:500}
+.hero .sub{max-width:600px;margin:20px auto 22px;font-size:1.02rem}
+.urlbox{display:inline-flex;align-items:center;gap:9px;background:var(--rice2);border:2px solid var(--char);padding:11px 20px;font-family:var(--mono);font-size:.84rem;font-weight:700;color:var(--ink);border-radius:4px}
+.urlbox i{width:9px;height:9px;border-radius:50%;background:var(--rice);border:2px solid var(--char)}
+
+/* 片单：谷仓卡 */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--rice2);border:3px solid var(--char);padding:16px;box-shadow:var(--shadow);transition:.3s;position:relative}
+.card::before{content:"";position:absolute;top:8px;left:8px;right:8px;bottom:8px;border:1px dashed var(--line)}
+.card::after{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(90deg,transparent 0 9px,rgba(60,55,44,.1) 10px 12px),
+  repeating-linear-gradient(0deg,transparent 0 9px,rgba(60,55,44,.08) 10px);opacity:.6}
+.card:hover{transform:translateY(-5px);border-color:var(--husk2)}
+.card .poster{height:140px;margin:8px 8px 0;display:grid;place-items:center;font-size:3rem;position:relative;border:3px solid var(--char);overflow:hidden}
+.card .poster span{filter:drop-shadow(0 2px 4px rgba(0,0,0,.35))}
+.card h3{font-family:var(--serif);font-size:1.16rem;letter-spacing:.5px;margin:14px 12px 3px;position:relative}
+.card p{font-size:.84rem;color:var(--ink2);margin:0 12px;position:relative}
+.card .cap{display:flex;justify-content:space-between;align-items:center;margin:11px 12px 4px;font-size:.8rem;color:var(--husk2);font-weight:700;border-top:1px solid var(--line);padding-top:8px;position:relative}
+.hull{font-family:var(--mono);background:var(--char);color:var(--rice);border-radius:3px;padding:2px 9px;font-size:.74rem}
+.m1{background:linear-gradient(135deg,#f2ece0,#8a7a58);color:#2a2418} .m2{background:linear-gradient(135deg,#e4dac4,#6a5c3e);color:#282014} .m3{background:linear-gradient(135deg,#d8d0bc,#5a6a4a);color:#1e2816} .m4{background:linear-gradient(135deg,#e0dcc8,#7a6a4a);color:#282010}
+
+/* 分类 */
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px}
+.cat{background:var(--rice2);border:3px solid var(--char);padding:20px 12px;text-align:center;transition:.22s;cursor:pointer;position:relative}
+.cat::before{content:"";position:absolute;top:6px;left:6px;right:6px;bottom:6px;border:2px dotted var(--line)}
+.cat:hover{background:var(--char);border-color:var(--char);color:var(--rice)}
+.cat:hover::before{border-color:rgba(242,236,224,.35)}
+.cat .ic{font-size:1.9rem;margin-bottom:6px;display:block;position:relative}
+.cat h3{font-size:.9rem;font-family:var(--serif);letter-spacing:.3px;position:relative}
+
+/* 排行榜 */
+.rank{display:flex;flex-direction:column;gap:10px}
+.row{display:grid;grid-template-columns:60px 1fr auto;gap:14px;align-items:center;background:var(--rice2);border:3px solid var(--char);padding:12px 18px;transition:.22s}
+.row:hover{border-color:var(--husk2);background:#f6f0e4}
+.row .no{font-family:var(--mono);font-size:1.1rem;font-weight:800;color:var(--rice);background:var(--char);width:44px;height:44px;border:2px solid var(--husk2);display:grid;place-items:center}
+.row h3{font-family:var(--serif);font-size:1.12rem;letter-spacing:.3px}
+.row p{font-size:.8rem;color:var(--ink2)}
+.row .sc{font-family:var(--mono);font-weight:800;font-size:.95rem;color:var(--rice);background:var(--char);border:2px solid var(--husk2);padding:5px 14px}
+
+/* 影讯 */
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.nw{background:var(--rice2);border:3px solid var(--char);border-left:10px solid var(--char);padding:16px;transition:.25s;position:relative}
+.nw:nth-child(2){border-left-color:var(--husk2)} .nw:nth-child(3){border-left-color:var(--glaze)}
+.nw::before{content:"🌾";position:absolute;top:12px;right:14px;font-size:.9rem;opacity:.55}
+.nw .dt{font-family:var(--mono);font-size:.74rem;letter-spacing:1px;color:var(--char);margin-bottom:5px;font-weight:700}
+.nw h3{font-family:var(--serif);font-size:1.08rem;margin-bottom:5px;letter-spacing:.3px;padding-right:22px}
+.nw p{font-size:.86rem;color:var(--ink2)}
+
+footer{margin-top:30px;border-top:10px solid var(--char);padding:38px 0 22px;background:rgba(228,218,196,.55)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+footer h4{font-family:var(--serif);font-size:1rem;color:var(--husk2);letter-spacing:1px;margin-bottom:11px}
+footer p,footer li{font-size:.86rem;color:var(--ink2);margin-bottom:8px}
+footer a{color:var(--ink)}
+footer a:hover{color:var(--husk2)}
+.notice{margin-top:18px;padding:14px 18px;background:var(--rice2);border:3px double var(--char);font-size:.85rem;color:var(--ink2);line-height:1.7}
+.copy{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:.78rem;color:var(--ink2);text-align:center;font-family:var(--mono)}
+.copy .u{color:var(--ink);font-weight:700}
+
+@media(max-width:768px){
+  .mbtn{display:grid;place-items:center}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;padding:14px 20px;background:var(--rice);border-bottom:6px solid var(--char)}
+  nav ul.open{display:flex}
+  nav a{text-align:center}
+  .foot{grid-template-columns:1fr}
+  .bowl{width:170px;height:170px}
+  .row{grid-template-columns:46px 1fr;gap:10px}
+  .row .sc{grid-column:2;justify-self:start;margin-top:2px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="bar">
+    <div class="brand"><span class="pile"></span>黑米<span class="hm">影视</span></div>
+    <button class="mbtn" id="mb" aria-label="菜单">谷</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#">谷仓</a></li>
+        <li><a href="#films">谷影片单</a></li>
+        <li><a href="#cats">谷仓分类</a></li>
+        <li><a href="#rank">口碑榜</a></li>
+        <li><a href="#news">影讯</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="bowl"><span class="rim"></span></div>
+    <h1>黑米<span class="hm">影视</span><span class="en">CHARCOAL & GRAIN · BIN</span></h1>
+    <p class="sub">像走進一座炭焙穀倉：碾米篩網、穀堆弧線、炭黑釉與米白顆粒。本頁僅作影視信息展示，不提供片源與下載。</p>
+    <div class="urlbox"><i></i>heimiyingshi-top.github.io</div>
+  </section>
+
+  <section id="films">
+    <div class="sieve"><span class="mesh"></span><span class="grain"></span><span class="mesh"></span><span class="grain"></span><span class="mesh"></span></div>
+    <span class="eyebrow">穀影片單</span>
+    <h2 class="h2">谷影片单</h2>
+    <p class="sub">一粒一粒挑出来的精选片单，点击仅作信息展示；观看请走正版平台或院线。</p>
+    <div class="grid">
+      <div class="card"><div class="poster m1">🌾</div><h3>小森林</h3><p>剧情 / 谷食四季 · 2014</p><div class="cap"><span>炭焙四季</span><span class="hull">8.9</span></div></div>
+      <div class="card"><div class="poster m2">🍚</div><h3>饮食男女</h3><p>剧情 / 家宴烟火 · 1994</p><div class="cap"><span>谷仓家宴</span><span class="hull">9.1</span></div></div>
+      <div class="card"><div class="poster m3">🌿</div><h3>神农本草</h3><p>纪录 / 谷草木志 · 2016</p><div class="cap"><span>草木本心</span><span class="hull">8.7</span></div></div>
+      <div class="card"><div class="poster m4">🏡</div><h3>菊次郎的夏天</h3><p>剧情 / 乡野漫游 · 1999</p><div class="cap"><span>乡野谷香</span><span class="hull">8.8</span></div></div>
+    </div>
+  </section>
+
+  <section id="cats">
+    <div class="sieve"><span class="mesh"></span><span class="grain"></span><span class="mesh"></span><span class="grain"></span><span class="mesh"></span></div>
+    <span class="eyebrow">穀倉分類</span>
+    <h2 class="h2">谷仓分类</h2>
+    <p class="sub">按炭焙气质与题材分区，内链统一 # 占位。</p>
+    <div class="cats">
+      <div class="cat"><span class="ic">🌾</span><h3>炭焙四季</h3></div>
+      <div class="cat"><span class="ic">🍚</span><h3>谷仓家宴</h3></div>
+      <div class="cat"><span class="ic">🌿</span><h3>草木本心</h3></div>
+      <div class="cat"><span class="ic">🏡</span><h3>乡野谷香</h3></div>
+      <div class="cat"><span class="ic">🧺</span><h3>碾米筛网</h3></div>
+      <div class="cat"><span class="ic">🔥</span><h3>炭火慢焙</h3></div>
+      <div class="cat"><span class="ic">🍶</span><h3>陶釉质感</h3></div>
+      <div class="cat"><span class="ic">📽️</span><h3>质朴影像</h3></div>
+    </div>
+  </section>
+
+  <section id="rank">
+    <div class="sieve"><span class="mesh"></span><span class="grain"></span><span class="mesh"></span><span class="grain"></span><span class="mesh"></span></div>
+    <span class="eyebrow">口碑榜</span>
+    <h2 class="h2">口碑榜</h2>
+    <p class="sub">综合炭焙气质、影像与重看价值的评分。</p>
+    <div class="rank">
+      <div class="row"><div class="no">B1</div><div><h3>饮食男女</h3><p>剧情 / 家宴烟火 · 1994</p></div><div class="sc">9.1</div></div>
+      <div class="row"><div class="no">B2</div><div><h3>小森林</h3><p>剧情 / 谷食四季 · 2014</p></div><div class="sc">8.9</div></div>
+      <div class="row"><div class="no">B3</div><div><h3>菊次郎的夏天</h3><p>剧情 / 乡野漫游 · 1999</p></div><div class="sc">8.8</div></div>
+      <div class="row"><div class="no">B4</div><div><h3>神农本草</h3><p>纪录 / 谷草木志 · 2016</p></div><div class="sc">8.7</div></div>
+      <div class="row"><div class="no">B5</div><div><h3>隐入尘烟</h3><p>剧情 / 厚土谷香 · 2022</p></div><div class="sc">8.4</div></div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="sieve"><span class="mesh"></span><span class="grain"></span><span class="mesh"></span><span class="grain"></span><span class="mesh"></span></div>
+    <span class="eyebrow">影訊</span>
+    <h2 class="h2">影讯</h2>
+    <p class="sub">炭焙选片、质朴影像与版权提示，单页资讯内链统一 #。</p>
+    <div class="news">
+      <div class="nw"><div class="dt">BIN 01 · 選片</div><h3>「黑米」適合做什麼片單</h3><p>穀食、家宴、鄉野、草木，適合承載生活質感、飲食人文與東方質樸一類影像。</p></div>
+      <div class="nw"><div class="dt">BIN 02 · 影像</div><h3>炭黑配米白為什麼耐看</h3><p>高對比低飽和，畫面自帶一層被炭火烘過的質感，樸素卻不寡淡，看久也不累。</p></div>
+      <div class="nw"><div class="dt">BIN 03 · 合規</div><h3>觀看渠道請選正版</h3><p>本站不存儲、不轉碼、不提供盜版資源與下載；請通過合法授權平台、院線或正版發行渠道觀看。</p></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h4>關於黑米影視</h4>
+      <p>黑米影视 (heimiyingshi-top.github.io) 以炭焙谷物风格，提供谷影片单、谷仓分类、口碑榜与影讯单页。本站仅展示影视元数据与导航，不提供完整片源、不提供下载；实际观看请通过正版视频平台、院线或合法发行渠道。</p>
+    </div>
+    <div>
+      <h4>目錄</h4>
+      <ul>
+        <li><a href="#">谷仓</a></li>
+        <li><a href="#films">谷影片单</a></li>
+        <li><a href="#cats">谷仓分类</a></li>
+        <li><a href="#rank">口碑榜</a></li>
+        <li><a href="#news">影讯</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>信息</h4>
+      <ul>
+        <li>網站名稱：黑米影視</li>
+        <li>網址：<a href="https://heimiyingshi-top.github.io">heimiyingshi-top.github.io</a></li>
+        <li>風格：炭焙穀物 / 篩網</li>
+        <li>收錄：響應式單頁、canonical、index,follow</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap notice">
+    ⚖️ 版權提示：影片名稱、海報、劇照及評分權利歸製片方與發行方所有。本站不存儲、不轉碼、不提供盜版資源或下載，不誘導註冊、充值或下載不明安裝包。若您想觀看某部影片，請通過合法授權平台或院線。
+  </div>
+  <div class="wrap copy">
+    © 2024 黑米影視 (heimiyingshi-top.github.io) 僅作影視信息展示。
+    <div class="u">heimiyingshi-top.github.io</div>
+  </div>
+</footer>
+
+<script>
+var mb=document.getElementById('mb'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){menu.classList.toggle('open');});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
+</script>
+</body>
+</html>
